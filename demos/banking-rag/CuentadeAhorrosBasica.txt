@@ -1,0 +1,15 @@
+# Documentos de prueba para Banking RAG System
+# Pequeños pero completos para pruebas locales
+
+BANKING_TEST_DOCUMENTS = [
+    {
+        "title": "Cuenta de Ahorros Basica",
+        "category": "productos",
+        "content": """
+        Cuenta de ahorros para personas fisicas. Deposito minimo: $500 pesos.
+        Sin comision por mantenimiento. Rendimiento: 3.5% anual.
+        Documentos: INE vigente, comprobante domicilio, CURP.
+        Beneficios: tarjeta de debito gratis, banca movil, retiros sin costo.
+        """
+    }
+]

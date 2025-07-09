@@ -1,0 +1,248 @@
+# ============================================================================
+# BANKING RAG SYSTEM - REQUIREMENTS.TXT CORREGIDO + AGENTE INTELIGENTE
+# Soporte para Stack Local y Cloud según configuración
+# ============================================================================
+
+# ============================================================================
+# CORE RAG FRAMEWORK (Obligatorio siempre)
+# ============================================================================
+langchain==0.1.0                    # Framework RAG principal
+langchain-community==0.0.13         # Conectores adicionales LangChain
+
+# *** NUEVAS DEPENDENCIAS PARA AGENTE INTELIGENTE ***
+langchain-experimental==0.0.47      # Herramientas experimentales para agentes
+langchain-core==0.1.0               # Core LangChain para agentes
+pydantic>=2.5.0,<3.0.0             # Data validation (compatible con LangChain)
+
+# ============================================================================
+# VECTOR DATABASES (Elegir según configuración)
+# ============================================================================
+# Local Vector DB - VERSIÓN CORREGIDA
+weaviate-client>=4.0.0              # Weaviate v4 (compatible con NumPy 2.x)
+chromadb==0.4.18                    # ChromaDB alternativo local
+faiss-cpu==1.7.4                    # FAISS para búsquedas rápidas
+
+# Cloud Vector DB (comentar si solo usas local)
+# pinecone-client==2.2.4             # Pinecone cloud
+# qdrant-client==1.6.9               # Qdrant cloud
+
+# ============================================================================
+# EMBEDDINGS (Elegir según configuración) - VERSIONES CORREGIDAS
+# ============================================================================
+# Local Embeddings (siempre incluir)
+sentence-transformers>=2.2.2        # Sentence-BERT local (multilingual)
+torch>=2.1.0                        # PyTorch para sentence-transformers (flexible)
+transformers>=4.36.0                # Hugging Face transformers
+numpy<2.0.0                         # NumPy compatible con PyTorch actual
+
+# Cloud Embeddings (descomenta si necesitas)
+# openai==1.6.1                      # OpenAI embeddings
+# cohere==4.37                       # Cohere embeddings
+
+# ============================================================================
+# LLM PROVIDERS (Configurables según necesidad)
+# ============================================================================
+# HTTP Requests (para APIs custom como tu Spring Boot)
+requests==2.31.0                    # Para llamadas HTTP a APIs
+httpx==0.25.2                       # Cliente HTTP async alternativo
+
+# *** NUEVAS PARA AGENTE INTELIGENTE ***
+tenacity==8.2.3                     # Retry logic para APIs externas
+backoff==2.2.1                      # Exponential backoff para requests
+
+# Local LLM (descomenta si usas Ollama directo)
+# ollama==0.1.7                      # Cliente Ollama Python
+
+# Cloud LLM (descomenta según necesidad)
+# openai==1.6.1                      # OpenAI GPT-4, GPT-3.5
+# anthropic==0.8.1                   # Claude API
+# google-generativeai==0.3.2         # Gemini Pro
+# cohere==4.37                       # Cohere Command
+# replicate==0.15.4                  # Replicate models
+
+# ============================================================================
+# FRONTEND & UI (Obligatorio)
+# ============================================================================
+streamlit==1.29.0                   # Interface principal
+gradio==4.8.0                       # UI alternativo (opcional)
+
+# *** NUEVAS PARA MEJOR UX DEL AGENTE ***
+streamlit-chat==0.1.1              # Componentes mejorados de chat
+streamlit-option-menu==0.3.6       # Menús mejorados en sidebar
+
+# ============================================================================
+# DOCUMENT PROCESSING (Obligatorio)
+# ============================================================================
+pypdf2==3.0.1                       # PDF processing
+python-docx==0.8.11                 # Word documents
+openpyxl==3.1.2                     # Excel files
+python-pptx==0.6.23                 # PowerPoint files
+unstructured==0.11.6                # Procesamiento avanzado documentos
+
+# *** NUEVAS PARA PROCESAMIENTO AVANZADO DEL AGENTE ***
+python-magic==0.4.27               # Detección automática de tipos de archivo
+chardet==5.2.0                     # Detección de encoding de archivos
+
+# ============================================================================
+# DATA PROCESSING & ANALYSIS (Obligatorio)
+# ============================================================================
+pandas==2.1.4                       # Data manipulation
+matplotlib==3.7.1                   # Basic plotting
+plotly==5.17.0                      # Interactive plots
+seaborn==0.13.0                     # Statistical visualization
+
+# *** NUEVAS PARA CÁLCULOS FINANCIEROS DEL AGENTE ***
+scipy==1.11.4                      # Scientific computing para cálculos avanzados
+sympy==1.12                        # Symbolic math para expresiones financieras
+
+# ============================================================================
+# CONFIGURATION & UTILITIES (Obligatorio)
+# ============================================================================
+python-dotenv==1.0.0                # Environment variables
+pydantic==2.5.0                     # Data validation (actualizado arriba)
+pyyaml==6.0.1                       # YAML config files
+click==8.1.7                        # CLI interfaces
+
+# *** NUEVAS PARA GESTIÓN DE CONFIGURACIÓN DEL AGENTE ***
+configparser==6.0.0                # Archivos de configuración INI
+toml==0.10.2                       # Archivos TOML de configuración
+
+# ============================================================================
+# MONITORING & LOGGING (Recomendado)
+# ============================================================================
+psutil==5.9.6                       # System monitoring
+loguru==0.7.2                       # Advanced logging
+prometheus-client==0.19.0           # Metrics (opcional)
+
+# *** NUEVAS PARA MONITOREO DEL AGENTE ***
+structlog==23.2.0                  # Structured logging para agentes
+python-json-logger==2.0.7          # JSON logging para análisis
+
+# ============================================================================
+# TESTING & DEVELOPMENT (Desarrollo)
+# ============================================================================
+pytest==7.4.3                       # Testing framework
+pytest-asyncio==0.21.1              # Async testing
+pytest-cov==4.1.0                   # Coverage reports
+black==23.11.0                      # Code formatting
+flake8==6.1.0                       # Linting
+mypy==1.7.1                         # Type checking
+
+# *** NUEVAS PARA TESTING DEL AGENTE ***
+pytest-mock==3.12.0                # Mocking para tests de agentes
+responses==0.24.1                  # Mock HTTP responses para tests
+
+# ============================================================================
+# WEB FRAMEWORK (Si necesitas API REST)
+# ============================================================================
+fastapi==0.104.1                    # REST API framework
+uvicorn==0.24.0                     # ASGI server
+
+# ============================================================================
+# SECURITY & AUTHENTICATION (Producción)
+# ============================================================================
+cryptography==41.0.7                # Encryption utilities
+python-jose==3.3.0                  # JWT handling
+passlib==1.7.4                      # Password hashing
+
+# ============================================================================
+# ASYNC & CONCURRENCY (Performance)
+# ============================================================================
+aiohttp==3.9.1                      # Async HTTP client
+
+# *** NUEVAS PARA MANEJO ASYNC DEL AGENTE ***
+asyncio-throttle==1.0.2            # Rate limiting async
+aiofiles==23.2.1                   # Async file operations
+
+# ============================================================================
+# AGENTE INTELIGENTE - APIS EXTERNAS (Opcionales - descomenta según necesidad)
+# ============================================================================
+# *** APIS DE SERVICIOS REALES ***
+# amadeus==8.1.0                     # API de vuelos Amadeus
+# stripe==7.8.0                      # Pagos con Stripe
+# twilio==8.10.3                     # SMS y llamadas
+# sendgrid==6.11.0                   # Email notifications
+# python-telegram-bot==20.7          # Bot de Telegram
+# whatsapp-business-python==2.0.0    # WhatsApp Business API
+
+# *** APIS DE INFORMACIÓN ***
+# openweathermap==0.25               # API del clima
+# exchangerate-api==1.0.0            # Conversión de monedas real
+# googlemaps==4.10.0                 # Google Maps API
+# geopy==2.4.1                       # Geocoding services
+
+# *** APIS FINANCIERAS ***
+# alpha-vantage==2.3.1               # Datos financieros Alpha Vantage
+# yfinance==0.2.28                   # Yahoo Finance data
+# polygon-api-client==1.12.4         # Polygon.io financial data
+
+# ============================================================================
+# OPTIONAL INTEGRATIONS (Según necesidad)
+# ============================================================================
+# Cloud Storage
+# boto3==1.34.0                      # AWS S3
+# azure-storage-blob==12.19.0        # Azure Blob
+# google-cloud-storage==2.10.0       # Google Cloud Storage
+
+# Database Connections
+# psycopg2-binary==2.9.9             # PostgreSQL (compatible con tu MyrluxBack)
+# pymongo==4.6.0                     # MongoDB
+# redis==5.0.1                       # Redis
+
+# Message Queues
+# celery==5.3.4                      # Task queue
+# redis==5.0.1                       # Message broker
+
+# ============================================================================
+# DEPLOYMENT & CONTAINERIZATION
+# ============================================================================
+# gunicorn==21.2.0                   # WSGI server para producción
+# docker==6.1.3                      # Docker SDK Python
+
+# ============================================================================
+# AGENTE INTELIGENTE - UTILIDADES ADICIONALES (Recomendadas)
+# ============================================================================
+# *** PARA PROCESAMIENTO DE LENGUAJE NATURAL ***
+spacy>=3.7.0                       # NLP avanzado (opcional)
+nltk==3.8.1                        # Natural Language Toolkit (opcional)
+
+# *** PARA CACHING Y PERFORMANCE ***
+diskcache==5.6.3                   # Cache en disco para respuestas
+joblib==1.3.2                      # Paralelización y caching
+
+# *** PARA VALIDACIÓN Y PARSING ***
+validators==0.22.0                 # Validación de URLs, emails, etc.
+python-dateutil==2.8.2             # Parsing de fechas inteligente
+
+# *** PARA MÉTRICAS Y ANALYTICS DEL AGENTE ***
+wandb==0.16.1                      # Weights & Biases para ML tracking (opcional)
+mlflow==2.8.1                      # ML experiment tracking (opcional)
+
+# ============================================================================
+# COMPATIBILIDAD Y VERSIONES ESPECÍFICAS
+# ============================================================================
+# *** ASEGURAR COMPATIBILIDAD ENTRE LANGCHAIN Y WEAVIATE ***
+typing-extensions>=4.5.0           # Typing extensions para compatibilidad
+dataclasses-json>=0.6.0            # JSON serialization para dataclasses
+marshmallow>=3.20.0                # Serialization alternativo
+
+# ============================================================================
+# NOTAS DE INSTALACIÓN PARA EL AGENTE INTELIGENTE
+# ============================================================================
+# 
+# INSTALACIÓN BÁSICA (solo lo necesario para el agente):
+# pip install langchain==0.1.0 langchain-community==0.0.13 langchain-experimental==0.0.47
+# pip install tenacity==8.2.3 backoff==2.2.1 streamlit-chat==0.1.1
+# pip install scipy==1.11.4 structlog==23.2.0
+#
+# INSTALACIÓN CON APIS EXTERNAS (para funcionalidades avanzadas):
+# pip install amadeus stripe twilio sendgrid openweathermap
+#
+# INSTALACIÓN COMPLETA (todo):
+# pip install -r requirements.txt
+#
+# VERIFICACIÓN:
+# python -c "import langchain; print('✅ LangChain OK')"
+# python -c "from langchain.agents import initialize_agent; print('✅ Agentes OK')"
+# python -c "import streamlit; print('✅ Streamlit OK')"
+#

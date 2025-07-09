@@ -1,0 +1,457 @@
+# Banking RAG System - .gitignore
+# Archivo de exclusiones para el proyecto Banking RAG
+
+# =============================================================================
+# PYTHON
+# =============================================================================
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.env/
+virtualenv/
+
+# Python compilado
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribución / empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# =============================================================================
+# VARIABLES DE ENTORNO Y CONFIGURACIÓN SENSIBLE
+# =============================================================================
+
+# Variables de entorno
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Configuración sensible
+config/secrets.yml
+config/database.yml
+config/production.yml
+secrets/
+credentials/
+
+# API Keys y tokens
+api_keys.txt
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# =============================================================================
+# BASES DE DATOS Y ALMACENAMIENTO
+# =============================================================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL dumps
+*.sql
+*.dump
+
+# Weaviate data
+weaviate_data/
+vector_data/
+embeddings_cache/
+
+# Data files
+data/raw/
+data/processed/
+data/external/
+*.csv
+*.json
+*.xml
+*.parquet
+*.feather
+
+# Modelos entrenados
+models/
+*.pkl
+*.joblib
+*.h5
+*.pb
+*.onnx
+*.pt
+*.pth
+
+# =============================================================================
+# LOGS Y MÉTRICAS
+# =============================================================================
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+log/
+temp/
+tmp/
+
+# Métricas y reportes
+reports/
+metrics/
+analytics/
+*.report
+*.metrics
+
+# =============================================================================
+# JAVA / SPRING BOOT
+# =============================================================================
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Spring Boot
+spring-boot-*.jar
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Application logs
+application.log
+application-*.log
+
+# =============================================================================
+# DOCKER Y CONTENEDORES
+# =============================================================================
+
+# Docker volumes
+docker-volumes/
+.docker/
+
+# Docker compose override
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Kubernetes secrets
+k8s-secrets/
+*.yaml.secret
+
+# =============================================================================
+# IDEs Y EDITORES
+# =============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# SISTEMAS OPERATIVOS
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# DEPENDENCIAS Y CACHE
+# =============================================================================
+
+# Node.js (si usas herramientas de frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Dependency directories
+jspm_packages/
+
+# =============================================================================
+# ARCHIVOS TEMPORALES Y BACKUP
+# =============================================================================
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Backups automáticos
+*.orig
+*.rej
+
+# =============================================================================
+# ARCHIVOS ESPECÍFICOS DEL PROYECTO BANKING RAG
+# =============================================================================
+
+# Documentos bancarios sensibles
+banking_docs/confidential/
+customer_data/
+financial_data/
+
+# Configuración de modelos
+model_configs/private/
+embedding_cache/
+vector_indexes/
+
+# Scripts de deployment
+deploy_keys/
+production_scripts/
+staging_scripts/
+
+# Datos de testing con información sensible
+test_data/real/
+test_data/production/
+
+# Cache de Streamlit
+.streamlit/secrets.toml
+
+# Cache de transformers/sentence-transformers
+.cache/
+transformers_cache/
+sentence_transformers_cache/
+
+# =============================================================================
+# ARCHIVOS GRANDES Y BINARIOS
+# =============================================================================
+
+# Archivos de datos grandes
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.pkl
+*.pickle
+
+# Archivos multimedia
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.wav
+*.flac
+
+# Archivos comprimidos grandes
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.bz2
+
+# =============================================================================
+# DOCUMENTACIÓN GENERADA
+# =============================================================================
+
+# Sphinx documentation
+docs/_build/
+docs/build/
+
+# mkdocs documentation
+/site
+
+# =============================================================================
+# HERRAMIENTAS DE DESARROLLO
+# =============================================================================
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# Profiling data
+*.prof
+
+# Memory dumps
+*.hprof
+
+# Performance logs
+perf.data*
+
+# =============================================================================
+# CONFIGURACIÓN LOCAL Y PERSONALIZADA
+# =============================================================================
+
+# Configuración local del desarrollador
+local_config.py
+local_settings.py
+dev_config.json
+
+# Scripts personales
+my_scripts/
+personal/
+scratch/
+
+# Experimentos y pruebas
+experiments/
+playground/
+sandbox/
+
+# =============================================================================
+# KEEP THESE DIRECTORIES BUT IGNORE CONTENTS
+# =============================================================================
+
+# Mantener directorios pero ignorar contenido
+data/.gitkeep
+logs/.gitkeep
+models/.gitkeep
+reports/.gitkeep
+
+# Pero ignorar todo lo demás en estos directorios
+data/*
+!data/.gitkeep
+!data/README.md
+
+logs/*
+!logs/.gitkeep
+!logs/README.md
+
+models/*
+!models/.gitkeep
+!models/README.md
+
+reports/*
+!reports/.gitkeep
+!reports/README.md

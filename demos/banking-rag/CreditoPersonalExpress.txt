@@ -1,0 +1,15 @@
+# Documentos de prueba para Banking RAG System
+# Pequeños pero completos para pruebas locales
+
+BANKING_TEST_DOCUMENTS = [
+    {
+        "title": "Credito Personal Express",
+        "category": "creditos",
+        "content": """
+        Prestamo personal hasta $100,000 pesos. Tasa desde 18% anual.
+        Requisitos: ingresos minimos $8,000, antiguedad laboral 6 meses.
+        Documentos: identificacion, comprobante ingresos, referencias.
+        Aprobacion en 24 horas. Sin garantia hipotecaria.
+        """
+    }
+]
